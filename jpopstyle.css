@@ -1,0 +1,182 @@
+body{
+    width: 100vw;
+    height:100vh;
+}
+.dispbody{
+    width: 100%
+}
+.verbtype{
+    font-size: 12px;
+}
+.verbText{
+    text-align: center;
+    width: 100%;
+    top:0;
+    left: 0;
+    background-color: rgb(0, 191, 255);
+    padding-top: 5px;
+}
+.english{
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    background-color: blue;
+    color: white
+}
+
+.error{
+    color: red;
+}
+.footer{
+    bottom:0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(0, 191, 255);
+    padding-top: 5px;
+}
+.start{
+    top: 0;
+    left: 0;
+    height: 82px;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(0, 191, 255);
+    padding: 0px
+}
+.overflow{
+    margin-top: 120px;
+    margin-bottom: 100px
+}
+.arrow{
+    	border-color: transparent green;
+	border-style: solid;
+	border-width: 20px 0px 20px 20px;
+	height: 0px;
+	width: 0px;
+}
+select{
+    height: 50px;
+}
+.circle, .circle:visited{
+    display: block;
+    color: black;
+    font-size: 28px;
+    width: 100%;
+    height:40px;
+    padding-top: 10px;
+    background-color: lightblue;
+    border-radius: 50px;
+    text-decoration: none;
+    border: solid black 2px;
+}
+.circle:hover{
+    background-color: rgb(0, 0, 255);
+    color:white
+}
+p{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+input[type="checkbox"]{display:none}
+label:hover{background-color: rgb(224,224,224);cursor: pointer}
+label{
+    display:inline-block;
+    width: 150px;
+    border: solid black 1px;
+    margin: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px
+}
+input[type="checkbox"]:checked + label{background-color: rgb(168,168,168);}
+
+.ans{
+    width: 98%;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: white;
+    border: solid black 2px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    white-space: initial;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.ans:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+.answrong{
+    display: inline-block;
+    width:25px;
+    height:25px;
+    border: solid 2px black;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px
+}
+.ansdiv{
+    background-color: white;
+}
+.ansHidden{
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: white;
+    border: none;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    white-space: initial;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.spin{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border-bottom: rgb(0, 191, 255) solid 3px;
+    border-radius: 20px;
+    margin: 0 auto;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 1000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 1000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 1000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+}
+.spin:after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 10px;
+    background-color: blue;
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform:rotate(0deg);
+  }
+
+  to {
+    -webkit-transform:rotate(360deg);
+  }
+}

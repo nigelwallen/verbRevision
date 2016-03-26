@@ -1,0 +1,13 @@
+<div class="dispBody">
+    <div class="verbText">
+        <h1 >{{verb.verbForm}}<span class='verbtype'>{{verb.verbType}}</span></h1>
+    </div>
+    <div ng-show="english.length"><p class="english">{{english}}</p></div>
+    <div ng-hide="english.length" class="ansdiv">
+        <div ng-class="!wrongAnswers[0]? 'ans' : 'ansHidden'" ng-click="ans(0)"><span ng-hide="wrongAnswers[0]">{{answerList[0]}}</span><span class="answrong" ng-show="wrongAnswers[0]">X</span></div>
+        <div ng-class="!wrongAnswers[1]? 'ans' : 'ansHidden'" ng-click="ans(1)"><span ng-hide="wrongAnswers[1]">{{answerList[1]}}</span><span class="answrong" ng-show="wrongAnswers[1]">X</span></div>
+        <div ng-class="!wrongAnswers[2]? 'ans' : 'ansHidden'" ng-click="ans(2)"><span ng-hide="wrongAnswers[2]">{{answerList[2]}}</span><span class="answrong" ng-show="wrongAnswers[2]">X</span></div>
+    </div>
+    <div class="spin" ng-if="english.length">
+    </div>
+</div>

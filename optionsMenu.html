@@ -1,0 +1,25 @@
+<div class="dispBody">
+    <div class="start">
+        <p>&nbsp;<a class="circle" ng-show="checkConjValid()" href="#quiz">START</a>&nbsp;</p>
+    </div>
+    <div class="overflow">
+        <p>CHAPTER: <select ng-model='options.chapter' ng-options="c for c in chapters" ng-change="updateVerbList()"></select></p>
+        <p>Include previous chapters?&nbsp;<input type="checkbox" id="upto" ng-model="options.upto" ><label for="upto">{{options.upto?'YES':'NO'}}</label></p>
+        <p>VERB FORMS:&nbsp;<span class="error" ng-show="!checkConjValid()">Please select at least one(1) verb form</span></p>
+        <p><input type="checkbox" ng-model="all" ng-change="checkAll(all)" id="master"><label for="master">{{all?'deselect':'select'}} all</label></p>
+        <p>
+            <input type="checkbox" id="dic"  ng-model="options.conJlist.dictionary" ng-change="updateConJList()"><label for="dic">dictionary</label>
+            <input type="checkbox" id="masu" ng-model="options.conJlist.masu" ng-init="options.conJlist.masu=true" ng-change="updateConJList()"><label for="masu">masu</label>
+            <input type="checkbox" id="te"  ng-model="options.conJlist.te" ng-change="updateConJList()"><label for="te">te</label>
+            <input type="checkbox" id="ta"  ng-model="options.conJlist.ta" ng-change="updateConJList()"><label for="ta">ta</label>
+            <input type="checkbox" id="pot" ng-model="options.conJlist.potential" ng-change="updateConJList()"><label for="pot">potential</label>
+            <input type="checkbox" id="vio" ng-model="options.conJlist.volitional" ng-change="updateConJList()"><label for="vio">volitional</label>
+            <input type="checkbox" id="ba" ng-model="options.conJlist.ba" ng-change="updateConJList()"><label for="ba">ba</label>
+            <input type="checkbox" id="pas" ng-model="options.conJlist.passive" ng-change="updateConJList()"><label for="pas">passive</label>
+            <input type="checkbox" id="cau" ng-model="options.conJlist.causative" ng-change="updateConJList()"><label for="cau">causative</label>
+            <input type="checkbox" id="cap" ng-model="options.conJlist['causative-passive']" ng-change="updateConJList()"><label for="cap">causative-passive</label>
+    </div>
+    <div class="footer">
+        <p>Revise <span ng-show="options.upto">up to</span> chapter {{options.chapter}}.</p>
+    </div>
+</div>
